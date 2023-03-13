@@ -1,0 +1,45 @@
+.container{
+    background-color:rgb(242,242,242);
+    width:100%;
+    margin-top:5%;
+    bottom:0;
+    display:flex;
+
+    
+}
+.content{
+    width:80%;
+    margin-left:10%;
+    padding:3rem 0rem 3rem 0rem;
+    display:flex;
+    display:grid;
+    grid-template: auto/ 33.3% 33.3% 33.3%;
+}
+.title{
+    font-family:'Stencil Std',fantasy;
+    
+   
+    
+    font-size:22px;
+   
+
+}
+.about{
+    display:flex;
+    flex-direction:column;
+    justify-self:center;
+}
+.about h3{
+    
+    font-family:'Stencil Std';
+    font-size:18px;
+}
+.abt{
+    display:flex;
+    flex-direction:column;
+    justify-self: flex-end;
+}
+.abt h3{
+    font-family:'Stencil Std';
+    font-size:18px;
+}

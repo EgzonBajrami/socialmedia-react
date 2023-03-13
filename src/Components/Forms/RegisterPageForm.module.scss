@@ -1,0 +1,19 @@
+
+.formContainer{
+    width:50%;
+    margin-left:25%;
+    padding:1rem;
+    border:0.05em solid #777;
+    border-radius:0.25em;
+
+}
+.formHolder{
+
+    display:grid;
+    grid-template:auto / 48% 48%;
+    gap:0.5em;
+}
+.btn{
+    display:flex;
+    justify-content: center;
+}

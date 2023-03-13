@@ -1,0 +1,18 @@
+.container{
+    width:90%;
+    margin-left:5%;
+}
+.replyBtn{
+    transform:rotate(50deg);
+    width:50px;
+}
+.parentContainer{
+    display:flex;
+    flex-direction:column;
+    padding:0.25em;
+    border-left:0.05em solid #d8d7d7;
+    border-radius:0.25em;
+
+    margin-top:2%;
+    
+}

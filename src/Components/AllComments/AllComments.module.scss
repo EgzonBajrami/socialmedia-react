@@ -1,0 +1,38 @@
+.parentContainer{
+    display:flex;
+    flex-direction:column;
+    padding:1em;
+    border:0.05em solid #d8d7d7;
+    border-radius:0.25em;
+    margin-top:5%;
+    font-family:'Stencil Std';
+}
+.reply{
+   
+    width:fit-content;
+    display:flex;
+    
+
+    padding:0.5rem;
+    margin-left:5%;
+}
+.reply button{
+    display:flex;
+    align-items:center;
+    height:30px;
+ width:50px;
+}
+.reply button:hover{
+    transform:scale(1.1);
+    color:black;
+}
+.childContainer{
+    display:flex;
+    flex-direction:column;
+    padding:0.25em;
+    border-left:0.05em solid #d8d7d7;
+    border-radius:0.25em;
+    margin-left:5%;
+    margin-top:2%;
+    
+}

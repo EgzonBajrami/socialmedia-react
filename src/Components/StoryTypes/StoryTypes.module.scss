@@ -1,0 +1,97 @@
+.container{
+   
+    width:80%;
+    margin-left:10%;
+    border-top:2px solid black;
+    margin-top:2%;
+}
+.title{
+    margin-top:1%;
+    font-family:'Stencil Std',fantasy;
+    
+   
+    
+    font-size:42px;
+    z-index:4;
+
+}
+.firstContent{
+    gap:30px;
+}
+.firstPost:hover{
+    color:rgb(130,128,214);
+    transform:scale(1.05);
+    cursor:pointer;
+}
+.content{
+    display:grid;
+    grid-template:auto / 65% 35%;
+
+    margin-top:2%;
+}
+.firstPostImg{
+    width:100%;
+    height:400px;
+}
+.firstPostImg img{
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+}
+.postTitle{
+    font-family:'Stencil Std',fantasy;
+    text-transform:uppercase;
+   
+    
+    font-size:32px;
+
+}
+.postAuthor{
+    font-family:'Stencil Std';
+    color:rgb(130,128,214);
+    text-transform:none;
+    
+    font-size:20px;
+    
+}
+.secondPostsWrapper{
+    display:flex;
+    flex-direction:column;
+    grid-row-gap:50px;
+    padding-left:2rem;
+}
+.secondPosts{
+    display:grid;
+    grid-template:auto / 45% 65%;
+  
+ 
+}
+.secondPosts:hover{
+    color:rgb(130,128,214);
+    transform:scale(1.05);
+    cursor:pointer;
+}
+.secondPostsImage{
+    width:100%;
+    height:130px;
+}
+.secondPostsImage img{
+    width:100%;
+    height:130px;
+    max-width:100%;
+    max-height:100%;
+}
+.secondPostsDetails{
+    padding-left:2rem;
+    font-family:'Stencil Std',fantasy;
+    font-size:22px;
+}
+.secondPostsAuthor{
+    font-family:'Stencil Std';
+    color:rgb(130,128,214);
+    text-transform:none;
+    
+    font-size:14px;
+
+}
