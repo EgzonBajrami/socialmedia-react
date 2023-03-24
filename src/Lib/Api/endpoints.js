@@ -10,7 +10,11 @@ const endpoints = {
     getComments:{url:'comments/postComments/', method:'GET'},
     createReply:{url:'comments/createReply/', method:'POST'},
     getTopStories:{url:'news/topStories', method:'GET'},
-    getStories:{url:'news/stories/', method:'GET'}
+    getStories:{url:'news/stories/', method:'GET'},
+    getDiscussions:{url:'news/discussions/', method:'GET'},
+    getUser:{url:'users/user/', method:'GET'},
+    changeUserImage:{url:'users/changeImage/', method:'POST'},
+    getUserPosts:{url:'news/userPosts/', method:'GET'}
 
 
 

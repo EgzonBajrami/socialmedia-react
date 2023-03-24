@@ -1,24 +1,32 @@
 import styles from './DiscussionHeader.module.scss'
+import {useNavigate} from 'react-router-dom';
 const DiscussionHeader = () =>{
+    const navigate = useNavigate();
     return<>
     <div className={styles.container}>
         <div className={styles.title}>
-            <p>Politics</p>
+            <p
+              onClick={()=>navigate(`/discussions/Politics`)}>Politics</p>
         </div>
         <div className={styles.title}>
-            <p>Justice</p>
+            <p
+              onClick={()=>navigate(`/discussions/Justice`)}>Justice</p>
         </div>
         <div className={styles.title}>
-            <p>National Security</p>
+            <p
+              onClick={()=>navigate(`/discussions/National_Security`)}>National Security</p>
         </div>
         <div className={styles.title}>
-            <p>World</p>
+            <p
+              onClick={()=>navigate(`/discussions/World`)}>World</p>
         </div>
         <div className={styles.title}>
-            <p>Technology</p>
+            <p
+              onClick={()=>navigate(`/discussions/Technology`)}>Technology</p>
         </div>
         <div className={styles.title}>
-            <p>Environment</p>
+            <p
+              onClick={()=>navigate(`/discussions/Environment`)}>Environment</p>
         </div>
 
 

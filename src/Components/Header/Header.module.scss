@@ -1,0 +1,83 @@
+.container{
+    top:0;
+    height:100vh;
+    position:fixed;
+    width:25%;
+}
+.heading{
+   
+    background-color:black;
+    display:flex;
+    align-items: center;
+    height:100px;
+    
+}
+.icon{
+    color:white;
+    margin-top:1.5%;
+    
+    
+  
+}
+.icon:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+    color:rgb(130,128,214);
+}
+.iconHolder{
+     display:flex;
+     width:100%;
+     padding:2rem;
+    
+   
+ 
+}
+.iconHolder p{
+    color:white;
+    margin-left:5%;
+    height:30px;
+    font-family:'Stencil Std', fantasy;
+    text-transform:uppercase;
+
+    
+    font-size:22px;
+}
+.iconHolder p:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+    color:rgb(130,128,214);
+
+}
+.content{
+    display:flex;
+    flex-direction:column;
+  
+    background-color:rgb(242,242,242);
+    height:100%;
+    width:0%;
+    animation: fillPage 1s ease 0s 1 normal forwards;
+
+}
+.content p{
+    padding:1rem;
+    margin-left:25%;
+    font-family:'Stencil Std', fantasy;
+    text-transform:uppercase;
+
+    
+    font-size:22px;
+}
+.content p:hover{
+    color:rgb(130,128,214);
+    cursor:pointer;
+}
+@keyframes fillPage {
+    0% {
+        width:0%;
+    }
+   
+    100%{
+        width:100%;
+    }
+
+}

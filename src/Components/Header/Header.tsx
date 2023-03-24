@@ -1,34 +1,71 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import styles from './Header.module.scss';
 
-function Header() {
-  return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faX } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {useState} from 'react';
+import {useNavigate} from 'react-router-dom'
+import {useSelector} from 'react-redux';
+import jwt_decode from 'jwt-decode';
+const Header = () =>{
+  const [show, setShow] = useState<boolean>(true);
+  const auth = useSelector((state:any)=>state.auth.data);
+  let decoded:any;
+  if(auth){
+  let current:any = jwt_decode(auth.token);
+   decoded = current._id;
+
+  }
+ 
+  const navigate = useNavigate();
+  return<>
+  <div className={styles.container}>
+    <div className={styles.heading}>
+      <div className={styles.iconHolder}>
+        <FontAwesomeIcon 
+        onClick={()=>setShow(!show)}
+        className={styles.icon} 
+        size='lg' icon={show?(faBars):(faX)} />
+      
+        <p
+        onClick={()=>navigate('/')}>The newspaper</p>
+
+      </div>
+    </div>
+    {show ?(<>
+      <div className={styles.noShow}>
+
+</div>
+    
+    </>):(<>
+   
+    
+    
+   
+    <div className={styles.content}>
+      <p
+      onClick={()=>navigate(`/discussions/Politics`)}>Politics</p>
+      <p
+      onClick={()=>navigate(`/discussions/Justice`)}>Justice</p>
+      <p
+      onClick={()=>navigate(`/discussions/National_Security`)}>National Security</p>
+        <p
+      onClick={()=>navigate(`/discussions/World`)}>World</p>
+      <p
+        onClick={()=>navigate(`/discussions/Technology`)}>Technology</p>
+      <p
+        onClick={()=>navigate(`/discussions/Environment`)}>Environment</p>
+        {decoded!==null && (<p onClick={()=>navigate(`/user/${decoded}`)}>
+          Profile
+
+        </p>)}
+
+    </div>
+    </>)}
+  
+   
+
+  </div>
+  </>
 }
-
 export default Header;
